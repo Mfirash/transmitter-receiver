@@ -1,0 +1,1 @@
+this transmitter can be global instead of only for main.go
