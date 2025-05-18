@@ -15,7 +15,7 @@ public class StringTransmitter {
         int serverPort = 12345; //replace this 
         JFrame frame = new JFrame("Transmitter");
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        frame.setSize(300, 300);
+        frame.setSize(300, 100);
         JPanel panel = new JPanel();
         JTextField textField = new JTextField(20);
         JButton button = new JButton("Send");
@@ -34,8 +34,7 @@ public class StringTransmitter {
                     System.out.println("sent: " + message);
                 } catch (IOException ex) {
                     System.err.println("error sending message: " + ex.getMessage());
-                }
-                textField.setText(""); 
+                }                
             }
         }); 
         textField.addActionListener(new ActionListener() {
@@ -43,7 +42,8 @@ public class StringTransmitter {
             public void actionPerformed(ActionEvent e) {
                 button.doClick();
             }
-        });
+        });      
+        frame.setLayout(new FlowLayout());
         frame.setVisible(true); 
        
     }    
